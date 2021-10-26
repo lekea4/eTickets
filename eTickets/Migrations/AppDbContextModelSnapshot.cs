@@ -162,7 +162,7 @@ namespace eTickets.Migrations
             modelBuilder.Entity("eTickets.Models.Movie", b =>
                 {
                     b.HasOne("eTickets.Models.Cinema", "Cinema")
-                        .WithMany()
+                        .WithMany("Movies")
                         .HasForeignKey("CinemaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -181,6 +181,11 @@ namespace eTickets.Migrations
             modelBuilder.Entity("eTickets.Models.Actor", b =>
                 {
                     b.Navigation("Actor_Movies");
+                });
+
+            modelBuilder.Entity("eTickets.Models.Cinema", b =>
+                {
+                    b.Navigation("Movies");
                 });
 
             modelBuilder.Entity("eTickets.Models.Movie", b =>
