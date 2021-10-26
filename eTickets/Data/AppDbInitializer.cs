@@ -152,8 +152,11 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
-                            CinemaId = 3,
-                            ProducerId = 3,
+                            Cinema = context.Cinemas.Find(3),
+                            Producer = context.Producers.Find(3),
+                            //ProducerId = 3,
+                            //CinemaId = 3,
+                     
                             MovieCategory = MovieCategory.Documentary
                         },
                         new Movie()
@@ -164,8 +167,10 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
-                            CinemaId = 1,
-                            ProducerId = 1,
+                            Cinema = context.Cinemas.Find(1),
+                            Producer = context.Producers.Find(1),
+                            //CinemaId = 1,
+                            //ProducerId = 1,
                             MovieCategory = MovieCategory.Action
                         },
                          new Movie()
@@ -176,8 +181,10 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
-                            CinemaId = 4,
-                            ProducerId = 4,
+                            Cinema = context.Cinemas.Find(4),
+                            Producer = context.Producers.Find(4),
+                            //CinemaId = 4,
+                            //ProducerId = 4,
                             MovieCategory = MovieCategory.Horror
                         },
                         new Movie()
@@ -188,8 +195,10 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
-                            CinemaId = 1,
-                            ProducerId = 2,
+                              Cinema = context.Cinemas.Find(1),
+                            Producer = context.Producers.Find(2),
+                            //CinemaId = 1,
+                            //ProducerId = 2,
                             MovieCategory = MovieCategory.Documentary
                         },
                          new Movie()
@@ -200,8 +209,10 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
-                            CinemaId = 1,
-                            ProducerId = 3,
+                            Cinema = context.Cinemas.Find(1),
+                            Producer = context.Producers.Find(3),
+                            //CinemaId = 1,
+                            //ProducerId = 3,
                             MovieCategory = MovieCategory.Cartoon
                         },
                         new Movie()
@@ -212,8 +223,10 @@ namespace eTickets.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
-                            CinemaId = 1,
-                            ProducerId = 5,
+                            Cinema = context.Cinemas.Find(1),
+                            Producer = context.Producers.Find(5),
+                            //CinemaId = 1,
+                            //ProducerId = 5,
                             MovieCategory = MovieCategory.Drama
                         }
                     });
