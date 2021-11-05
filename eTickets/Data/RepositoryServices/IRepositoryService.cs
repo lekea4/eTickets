@@ -11,8 +11,8 @@ namespace eTickets.Data.RepositoryServices
         Task <IEnumerable<T>> GetAll();
         Task<T>  GetById(int id);
         Task<T> Add(T model);
-        Task  Update(T model, int id);
+        Task  Update(int id, T model);
 
-        Task Delete(T model);
+        Task Delete(int id);
     }
 }

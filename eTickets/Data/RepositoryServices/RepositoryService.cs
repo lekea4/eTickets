@@ -23,9 +23,9 @@ namespace eTickets.Data.RepositoryServices
             return model;
         }
 
-        public async  Task Delete(T model)
+        public async  Task Delete(int id)
         {
-            _context.Set<T>().Remove(model);
+            _context.Remove(id);
             await _context.SaveChangesAsync();
         }
 
@@ -39,7 +39,7 @@ namespace eTickets.Data.RepositoryServices
             return await _context.Set<T>().FindAsync(id);
         }
 
-        public async  Task Update(T model, int id)
+        public async  Task Update( int id, T model)
         {
             _context.Update(model);
             await _context.SaveChangesAsync();

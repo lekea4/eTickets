@@ -12,8 +12,8 @@ namespace eTickets.Data.Services.Interfaces
         Task<IEnumerable<Actor>> GetAllAsync();
         Task<Actor> GetByIdAsync(int id);
         Task AddAsync(Actor actor);
-        Task UpdateAsync(Actor newActor, int id);
+        Task<Actor> UpdateAsync(int id, Actor newActor);
 
-        Task DeleteAsync(Actor actor);
+        Task DeleteAsync(int id);
     }
 }
