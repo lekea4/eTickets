@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eTickets.Data.RepositoryServices
 {
-    public class RepositoryService<T> : IRepositoryService<T> where T : class
+    public class RepositoryService<T> : IRepositoryService<T> where T : class, IEntityBase, new ()
     {
         private readonly AppDbContext _context;
 

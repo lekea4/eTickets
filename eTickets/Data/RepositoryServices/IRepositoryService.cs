@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eTickets.Data.RepositoryServices
 {
-    public interface IRepositoryService<T> where T : class
+    public interface IRepositoryService<T> where T : class, IEntityBase, new()
     {
         Task <IEnumerable<T>> GetAll();
         Task<T>  GetById(int id);
