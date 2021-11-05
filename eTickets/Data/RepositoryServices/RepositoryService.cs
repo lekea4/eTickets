@@ -36,7 +36,7 @@ namespace eTickets.Data.RepositoryServices
 
         public async  Task<T> GetById(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
+            return await _context.Set<T>().FirstOrDefaultAsync(n => n.Id == id);
         }
 
         public async  Task Update( int id, T model)
